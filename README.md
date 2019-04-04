@@ -19,7 +19,7 @@
 
 #### controller node 설정 (controller node가 swift-proxy 역할을 하게 됨)
 
-![Swift structure](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjz3_nU0LbhAhXFXLwKHT-IDw4QjRx6BAgBEAU&url=https%3A%2F%2Ftino1b2be.com%2Finstall-swift-on-a-single-vm-with-tempauth-no-openstackswiftstack-client%2F&psig=AOvVaw31JWwCfPscLaG8KtjwrxJ4&ust=1554473859062342)
+![Swift structure](https://tino1b2be.com/wp-content/uploads/2017/01/state-of-the-stack-april-2013-50-638.jpg)
 
 1. 
 
