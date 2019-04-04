@@ -33,12 +33,12 @@
 
 
     1. 설치
-    ```
+```
 apt-get install xinetd rsync
-    ```
+```
 
     2. vi /etc/xinetd.d/rsync (rsync service 등록)
-    ```
+```
 service rsync
 {
 disable = no
@@ -49,10 +49,10 @@ server = /usr/bin/rsync
 server_args = –daemon
 log_on_failure += USERID
 }
-    ```
+```
 
     3. vi /etc/rsyncd.conf
-    ```
+```
 
 uid = swift
 gid = swift
@@ -78,10 +78,10 @@ path = /srv/node/
 read only = False
 lock file = /var/lock/object.lock
 
-    ```
+```
 
     4. rysnc service 시작
-    ```
+```
 systemctl enable rsync
 systemctl start rsync
-    ```
+```
