@@ -31,13 +31,12 @@
 
 * rsync 설치 : 다량의 파일들을 전송/수신하고, 데이터 증분치에 대한 반영을 할 수 있는 가장 좋은 방법 ![자료](https://www.yongbok.net/blog/tag/%EC%9A%B0%EB%B6%84%ED%88%AC-rsync-%EC%84%A4%EC%A0%95/)
 
-
-    1. 설치
+1. 설치
 ```
 apt-get install xinetd rsync
 ```
 
-    2. vi /etc/xinetd.d/rsync (rsync service 등록)
+2. vi /etc/xinetd.d/rsync (rsync service 등록)
 ```
 service rsync
 {
@@ -51,7 +50,7 @@ log_on_failure += USERID
 }
 ```
 
-    3. vi /etc/rsyncd.conf
+3. vi /etc/rsyncd.conf
 ```
 
 uid = swift
@@ -80,7 +79,7 @@ lock file = /var/lock/object.lock
 
 ```
 
-    4. rysnc service 시작
+4. rysnc service 시작
 ```
 systemctl enable rsync
 systemctl start rsync
