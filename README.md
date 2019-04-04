@@ -28,3 +28,26 @@
 * EC2를 사용할 경우 Elastic block storage > 블록 에서 디스크 추가 후 storage node연결해야함
 * VM을 사용할 경우 디스크 두개를 
 ```
+
+2. rsync 설치 : 다량의 파일들을 전송/수신하고, 데이터 증분치에 대한 반영을 할 수 있는 가장 좋은 방법
+
+출처: https://www.yongbok.net/blog/tag/%EC%9A%B0%EB%B6%84%ED%88%AC-rsync-%EC%84%A4%EC%A0%95/ [nota's story]
+
+2-1 설치
+```
+apt-get install xinetd rsync
+```
+
+2-2 vi /etc/xinetd.d/rsync (rsync service 등록)
+```
+service rsync
+{
+disable = no
+socket_type = stream
+wait = no
+user = root
+server = /usr/bin/rsync
+server_args = –daemon
+log_on_failure += USERID
+}
+```
