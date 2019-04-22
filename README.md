@@ -20,6 +20,18 @@
 
 ### controller node 설정 (controller node가 swift-proxy 역할을 하게 됨)
 
+* endpoint 설정
+```
+1. public endpoint 
+ openstack endpoint create --region RegionOne object-store public http://controller:8080/v1/AUTH_%\(project_id\)s
+
+2. internal endpoint
+ openstack endpoint create --region RegionOne object-store internal http://controller:8080/v1/AUTH_%\(project_id\)s
+
+3. admin endpoint
+ openstack endpoint create --region RegionOne object-store admin http://controller:8080/v1
+```
+
 
 ### storage node 설정
 
