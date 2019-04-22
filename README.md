@@ -117,16 +117,12 @@ swift-ring-builder account.builder create 10 3 1
 
 2. 각 storage node에 ring연결
 ```
-swift-ring-builder account.builder \
-  add --region 1 --zone 1 --ip 자기자신privateIP --port 6202 \
-  --device 이곳에 더 붙여준 디스크이름 --weight 그 디스크 사이즈
+swift-ring-builder account.builder add --region 1 --zone 1 --ip 자기자신privateIP --port 6202 --device 이곳에 더 붙여준 디스크이름 --weight 100
 
 # ( EXAMPLE )
 # EC2에서 볼륨을 추가 할 경우 xvdb형태로 이름이 자동으로 변경
-swift-ring-builder account.builder add \
-  --region 1 --zone 1 --ip 172.31.0.0 --port 6202 --device xvdb --weight 10
-swift-ring-builder account.builder add \
-  --region 1 --zone 1 --ip 172.31.0.0 --port 6202 --device xvdc --weight 10
+swift-ring-builder account.builder add --region 1 --zone 1 --ip 172.31.0.0 --port 6202 --device xvdb --weight 100
+swift-ring-builder account.builder add--region 1 --zone 1 --ip 172.31.0.0 --port 6202 --device xvdc --weight 100
   
 # account 연결 확인 명령어
 swift-ring-builder account.builder
