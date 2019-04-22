@@ -33,6 +33,17 @@
 ```
 
 
+* proxy server 설치
+```
+apt-get install swift swift-proxy python-swiftclient python-keystoneclient python-keystonemiddleware memcached
+```
+
+* /etc/swift directory 생성 및 config 파일 설정
+```
+curl -o /etc/swift/proxy-server.conf https://git.openstack.org/cgit/openstack/swift/plain/etc/proxy-server.conf-sample?h=stable/rocky
+
+```
+
 ### storage node 설정
 
 * 디스크 2개 추가 (sdb, sdc)
