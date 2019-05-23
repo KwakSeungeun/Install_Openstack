@@ -17,8 +17,15 @@ controller 노드는 정확한 time server를 reference하고,
 그 외 노드들이 controller 노드를 reference 하도록 설정한다.
 https://docs.openstack.org/install-guide/environment-ntp.html
 
+<h5></h5>
 
+<h5></h5>
 
+<h5></h5>
+
+<h5></h5>
+
+<h5></h5>
 
 
 <h4>KEYSTONE</h4>  
