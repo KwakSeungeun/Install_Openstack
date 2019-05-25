@@ -118,3 +118,7 @@ scp -i pem파일(디렉토리 포함) / 전송할 파일 / 원격지 유저이�
 (apt-get upgrade : 내 우분투에 있는 패키지들을 실제로 최신 버전으로 업그레이드 하는 명령어. 
 여기서 최신 버전이란 위의 apt-get update 명령어를 수행했을 때 확인된 최신 버전이겠지?)
 (참고: https://dowhateveryouwant.tistory.com/11)
+
+
+
+openstack glossary : https://docs.openstack.org/doc-contrib-guide/common/glossary.html
