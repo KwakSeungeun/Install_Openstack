@@ -1,36 +1,37 @@
-<h3>오픈스택 설치 가이드</h3>  
+### PREREQUISITES
 
 ---
-
-#### PREREQUISITES
  
-##### Host networking
+#### Host networking
 
 ```
 노드마다 네트워크 인터페이스를 설정하고 노드의 privateIP주소에 hostname을 등록하는 과정
 ```
-[Network 환경 설치 가이드](https://docs.openstack.org/install-guide/environment-networking.html)
+* [Network 환경 설치 가이드](https://docs.openstack.org/install-guide/environment-networking.html)
 
-[Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
+* [Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
 
 
-##### NTP
+
+#### NTP
 ```
 노드간 synchronization을 위한 과정
 controller 노드는 정확한 time server를 reference하고, 
 그 외 노드들이 controller 노드를 reference 하도록 설정한다.
 ```
-[NTP 설정 가이드](https://docs.openstack.org/install-guide/environment-ntp.html)
+* [NTP 설정 가이드](https://docs.openstack.org/install-guide/environment-ntp.html)
 
-##### Openstack package install
+
+
+#### Openstack package install
 ```
 오픈스택의 최신 버전을 수시로 받기 위해 PPA(Personal Package Archive)를 이용한다.
 add-apt-repository를 통해 PPA를 추가하고 패키지 최신 업데이트와 설치한다.
 ```
-[PPA 가이드](https://docs.openstack.org/install-guide/environment-packages-ubuntu.html)
+* [PPA 가이드](https://docs.openstack.org/install-guide/environment-packages-ubuntu.html)
 
 
-##### DB, Message Queue, Memcached & etcd 설치
+#### DB, Message Queue, Memcached & etcd 설치
 ```
 이들은 대개 컨트롤러 노드에서 동작한다.
 
