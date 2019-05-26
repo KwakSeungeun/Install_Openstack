@@ -11,7 +11,7 @@
 
 * [Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
 
-
+---
 
 #### NTP
 ```
@@ -21,7 +21,7 @@ controller 노드는 정확한 time server를 reference하고,
 ```
 * [NTP 설정 가이드](https://docs.openstack.org/install-guide/environment-ntp.html)
 
-
+---
 
 #### Openstack package install
 ```
@@ -30,6 +30,7 @@ add-apt-repository를 통해 PPA를 추가하고 패키지 최신 업데이트�
 ```
 * [PPA 가이드](https://docs.openstack.org/install-guide/environment-packages-ubuntu.html)
 
+---
 
 #### DB, Message Queue, Memcached & etcd 설치
 ```
