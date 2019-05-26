@@ -71,15 +71,15 @@ ec2 인스턴스에 파일시스템 추가방법
  4. /etc/fstab 설정에 디바이스 등록해서 재부팅할 때마다 연결된 EBS 볼륨을 탑재하도록 함
 
 ##### conf 링크 주소
->> vim /etc/swift/account, container, object-server.conf >>
+> vim /etc/swift/account, container, object-server.conf >
 https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/account-server.conf-sample
 https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/container-server.conf-sample
 https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/object-server.conf-sample
 
->>  /etc/swift/swift.conf >> 
+>  /etc/swift/swift.conf >
 https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/swift.conf-sample
 
->> /etc/swift/proxy-server.conf >>
+> /etc/swift/proxy-server.conf >
 https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/proxy-server.conf-sample
 
 
@@ -95,15 +95,11 @@ scp -i pem파일(디렉토리 포함) / 전송할 파일 / 원격지 유저이�
 ```
 
 
->>원격지의 다운로드 위치의 소유자와 유저이름이 일치해야 함 > chown 
->>permission denied > 디렉토리 권한 확인 ex)700?????
+> 원격지의 다운로드 위치의 소유자와 유저이름이 일치해야 함  : chown 
+> permission denied : 디렉토리 권한 확인 ex)700
 
-(apt-get update : 사용 가능한 패키지들과 그 버전들의 리스트를 업데이트 하는 명령어. 
- 실제 패키지 버전을 업그레이드하는 것이 아니라 최신 버전 패키지가 있는지를 확인하고 내 우분투에 알려주는 용도.)
-(apt-get upgrade : 내 우분투에 있는 패키지들을 실제로 최신 버전으로 업그레이드 하는 명령어. 
-여기서 최신 버전이란 위의 apt-get update 명령어를 수행했을 때 확인된 최신 버전이겠지?)
-(참고: https://dowhateveryouwant.tistory.com/11)
-
-
-
-openstack glossary : https://docs.openstack.org/doc-contrib-guide/common/glossary.html
+`apt-get update` : 사용 가능한 패키지들과 그 버전들의 리스트를 업데이트 하는 명령어. 
+ 실제 패키지 버전을 업그레이드하는 것이 아니라 최신 버전 패키지가 있는지를 확인하고 내 우분투에 알려주는 용도.
+ 
+`apt-get upgrade` : 내 우분투에 있는 패키지들을 실제로 최신 버전으로 업그레이드 하는 명령어. 
+[참고](https://dowhateveryouwant.tistory.com/11))
