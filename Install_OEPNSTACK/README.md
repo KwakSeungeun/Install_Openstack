@@ -1,41 +1,57 @@
 <h3>오픈스택 설치 가이드</h3>  
 
-=======
+---
 
-####PREREQUISITES
+#### PREREQUISITES
  
-#####Host networking
+##### Host networking
 
 ```
 노드마다 네트워크 인터페이스를 설정하고 노드의 privateIP주소에 hostname을 등록하는 과정
 ```
+[Network 환경 설치 가이드](https://docs.openstack.org/install-guide/environment-networking.html)
 
-* [Network 환경 설치 가이드](https://docs.openstack.org/install-guide/environment-networking.html)
-* [Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
+[Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
 
-<h5>NTP</h5>
+
+##### NTP
+```
 노드간 synchronization을 위한 과정
 controller 노드는 정확한 time server를 reference하고, 
 그 외 노드들이 controller 노드를 reference 하도록 설정한다.
+```
 [NTP 설정 가이드](https://docs.openstack.org/install-guide/environment-ntp.html)
 
-<h5>Openstack package install</h5>
+##### Openstack package install
+```
 오픈스택의 최신 버전을 수시로 받기 위해 PPA(Personal Package Archive)를 이용한다.
 add-apt-repository를 통해 PPA를 추가하고 패키지 최신 업데이트와 설치한다.
+```
 [PPA 가이드](https://docs.openstack.org/install-guide/environment-packages-ubuntu.html)
 
-<h5>DB, Message Queue, Memcached & etcd 설치</h5>
-오픈스택 서비스 컴포넌트들은 정보 저장을 위한 데이터베이스와 operation과 정보 처리를 위해 message queue를 미들웨어로 사용한다.
-인증 서비스(keystone)에서 토큰 캐시 저장을 위해 Memcached 를 사용한다. 클라우드 서비스 deployment를 위해서는 firewalling , authentication, encryption을 권장한다.
-etcd는 분산 key-value store
-etcd는 네트워크로 연결된 노드들 중 리더를 선정해서 클러스터를 관리한다. 데이터는 분산 저장되기 때문에 리더를 포함한 시스템의 오류에 대한 내성을가진다.
-응용 프로그램은 etcd에 데이터를 읽고 쓸 수 있다. 간단한 예제는 데이터베이스 연결 정보와 플래그 값을 etcd에 저장하는 것이다. etcd는 값 변경에 대한 감시 기능을 제공하므로 설정이 변경될 경우 앱을 재구성할 수있다. 좀 더 나아가면 데이터에 대한 일관성을 보장하는 점을 활용해서 리더를 선출하고, 작업 클러스터 전체에 대한 분산 잠금을 수행 할 수 있다.
-https://www.joinc.co.kr/w/man/12/etcd
+
+##### DB, Message Queue, Memcached & etcd 설치
+```
 이들은 대개 컨트롤러 노드에서 동작한다.
-https://docs.openstack.org/install-guide/environment-sql-database-ubuntu.html
-https://docs.openstack.org/install-guide/environment-messaging-ubuntu.html
-https://docs.openstack.org/install-guide/environment-memcached-ubuntu.html
-https://docs.openstack.org/install-guide/environment-etcd-ubuntu.html
+
+오픈스택 서비스 컴포넌트들은 정보 저장을 위한 데이터베이스와 operation과 정보 처리를 위해 message queue를 미들웨어로 사용한다.
+인증 서비스(keystone)에서 토큰 캐시 저장을 위해 Memcached 를 사용한다. 
+클라우드 서비스 deployment를 위해서는 firewalling , authentication, encryption을 권장한다.
+
+etcd는 분산 key-value store
+etcd는 네트워크로 연결된 노드들 중 리더를 선정해서 클러스터를 관리한다. 
+데이터는 분산 저장되기 때문에 리더를 포함한 시스템의 오류에 대한 내성을가진다.
+응용 프로그램은 etcd에 데이터를 읽고 쓸 수 있다. 간단한 예제는 데이터베이스 연결 정보와 플래그 값을 etcd에 저장하는 것이다. 
+etcd는 값 변경에 대한 감시 기능을 제공하므로 설정이 변경될 경우 앱을 재구성할 수있다. 
+좀 더 나아가면 데이터에 대한 일관성을 보장하는 점을 활용해서 리더를 선출하고, 작업 클러스터 전체에 대한 분산 잠금을 수행 할 수 있다.
+```
+* [etcd란?](https://www.joinc.co.kr/w/man/12/etcd)
+* [sql-db 가이드](https://docs.openstack.org/install-guide/environment-sql-database-ubuntu.html)
+* [message 가이드](https://docs.openstack.org/install-guide/environment-messaging-ubuntu.html)
+* [memcahed 가이드](https://docs.openstack.org/install-guide/environment-memcached-ubuntu.html)
+* [etcd 가이드](https://docs.openstack.org/install-guide/environment-etcd-ubuntu.html)
+
+---
 
 <h4>KEYSTONE</h4>
 controller 노드에서 여러 서비스 사용에 필요한 인증 서비스를 통합 관리한다.
