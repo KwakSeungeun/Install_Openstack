@@ -1,14 +1,17 @@
 <h3>오픈스택 설치 가이드</h3>  
 
----
+=======
 
-<h4>PREREQUISITES</h4>
-<h5>Host networking</h5>
+####PREREQUISITES
+ 
+#####Host networking
+
 ```
 노드마다 네트워크 인터페이스를 설정하고 노드의 privateIP주소에 hostname을 등록하는 과정
-[Network 환경 설치 가이드](https://docs.openstack.org/install-guide/environment-networking.html)
 ```
-[Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
+
+* [Network 환경 설치 가이드](https://docs.openstack.org/install-guide/environment-networking.html)
+* [Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
 
 <h5>NTP</h5>
 노드간 synchronization을 위한 과정
