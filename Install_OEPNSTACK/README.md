@@ -55,54 +55,22 @@ etcd는 값 변경에 대한 감시 기능을 제공하므로 설정이 변경�
 
 ---
 
-<h4>KEYSTONE</h4>
-controller 노드에서 여러 서비스 사용에 필요한 인증 서비스를 통합 관리한다.
-※Swift만 사용하는 경우, Swift는 TempAuth를 제공하여 독자적인 서비스가 가능하기 때문에 굳이 설치하지 않아도 상관없다.
+#### 유용한 linux command
 
-<h5>DB, Apache HTTP 서버 설정</h5>
-keystone을 위해 사용할 database 를 만들고, 접근을 위한 설정을 한다. 
-※ Bootstrap the Identity service 단계 
-v2 API에서 admin을 위한 port (35357)을 별개로 두어 5000번과 35357을 두가지를 사용했으나, v3 API를 사용하게 되며 5000번으로 통일해서 사용한다.
-일부 가이드에서 수정이 제대로 이루어지지 않아 35357을 사용하므로 주의, 35357을 사용할 경우 추후 사용자 인증 과정에서 communication error가 발생 할 수 있다.
-※ admin으로 서비스를 사용하기 위한 계정 설정 과정이다.
-소개하는 것처럼 command로 하나하나 값을 export하는 것이 아닌, script로 작성하는 방법도 있다. 
-일반 유저 설정에도 동일한 방법을 적용하면 편한다. > https://docs.openstack.org/keystone/rocky/install/keystone-openrc-ubuntu.html
-https://docs.openstack.org/keystone/rocky/install/keystone-install-ubuntu.html#configure-the-apache-http-server
+* 파일시스템확인 ` df -T `
 
-<h5>Create a domain, projects, users, and roles</h5>
-domain: 
-project:
-user:
-role:
-https://docs.openstack.org/keystone/rocky/install/keystone-users-ubuntu.html
+* 설치된 패키지 리스트   `apt list --installed`
 
 
-<h5></h5>
+##### openstack setting guide
 
-<h5></h5>
-
-
-<h4>KEYSTONE</h4>  
-Keystone은 openstack 서비스를 이용하기 위한 인증과 관리 등을 제공하는 서비스이다.  
-
-
-
-
-
-<h4>linux command</h4>
-
-파일시스템확인
-df -T
-
-설치된 패키지 리스트
-apt list --installed
-
-
-<h2>openstack setting guide</h2>
 ec2 인스턴스에 파일시스템 추가방법
-새로운 EBS를 인스턴스에 추가하고 연결 > 해당 EBS 파일시스템 설정 > 인스턴스와 EBS 마운트 > /etc/fstab 설정에 디바이스 등록해서 재부팅할 때마다 연결된 EBS 볼륨을 탑재하도록 함
+ 1. 새로운 EBS를 인스턴스에 추가하고 연결
+ 2. 해당 EBS 파일시스템 설정
+ 3. 인스턴스와 EBS 마운트
+ 4. /etc/fstab 설정에 디바이스 등록해서 재부팅할 때마다 연결된 EBS 볼륨을 탑재하도록 함
 
-<h2>conf 링크 주소</h2>
+##### conf 링크 주소
 >> vim /etc/swift/account, container, object-server.conf >>
 https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/account-server.conf-sample
 https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/container-server.conf-sample
@@ -118,14 +86,14 @@ https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/proxy-server.con
 ec2 인스턴스간 통신 > 각각의 인스턴스가 포함된 보안그룹의 인바운드 규칙 수정 > 모든icmp ipv4 > 통신을 원하는 인스턴스가 속한 보안 그룹 추가 ( 두 인스턴스가 같은 보안 그룹에 속해있는 경우 인바운드 규칙에 해당 보안 그룹을 포함해주어야 통신 가능 > ping 확인
 
 
-ls -l 파일 권한 정보
-https://conory.com/blog/19194
+[파일 권한 정보](https://conory.com/blog/19194)
 
-<scp를 이용한 인스턴스간 파일 전송>
-
+###### [scp를 이용한 인스턴스간 파일 전송](https://stackoverflow.com/questions/11388014/using-scp-to-copy-a-file-to-amazon-ec2-instance)
+```
 scp -i pem파일(디렉토리 포함) / 전송할 파일 / 원격지 유저이름@ip주소(public):~/저장위치
 (-i 옵션: Specifies an alternate identification file to use for public key authentication. )
-(https://stackoverflow.com/questions/11388014/using-scp-to-copy-a-file-to-amazon-ec2-instance)
+```
+
 
 >>원격지의 다운로드 위치의 소유자와 유저이름이 일치해야 함 > chown 
 >>permission denied > 디렉토리 권한 확인 ex)700?????
