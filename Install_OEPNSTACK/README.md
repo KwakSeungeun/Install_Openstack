@@ -1,29 +1,25 @@
 <h3>오픈스택 설치 가이드</h3>  
-※ 우리 프로젝트를 기준으로 작성하였다.  
-※ openstack 공식 설치 가이드를 기준으로 하되, 겪은 시행착오와 Tip, 설치 구성 요소의 의미를 중심으로 작성하였다.  
-※ Ubuntu 18.04 server LTS, openstack rocky 버전을 사용함.
-(https://docs.openstack.org/keystone/rocky/install/keystone-install-ubuntu.html)    
-※ 설치 가이드 링크에서 command의 시작이 $: 유저 모드, #: sudo 모드
-※ 가이드에서 제시하는 설치 대상이 어떤 노드인지 확인하고 진행하자 
-※ 컴포넌트 설치 및 설정에 사용하는 비밀번호 분실주의
+
+---
 
 <h4>PREREQUISITES</h4>
 <h5>Host networking</h5>
+```
 노드마다 네트워크 인터페이스를 설정하고 노드의 privateIP주소에 hostname을 등록하는 과정
-https://docs.openstack.org/install-guide/environment-networking.html
-※Configure network interface 키워드 의미
-https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax
+[Network 환경 설치 가이드](https://docs.openstack.org/install-guide/environment-networking.html)
+```
+[Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
 
 <h5>NTP</h5>
 노드간 synchronization을 위한 과정
 controller 노드는 정확한 time server를 reference하고, 
 그 외 노드들이 controller 노드를 reference 하도록 설정한다.
-https://docs.openstack.org/install-guide/environment-ntp.html
+[NTP 설정 가이드](https://docs.openstack.org/install-guide/environment-ntp.html)
 
 <h5>Openstack package install</h5>
 오픈스택의 최신 버전을 수시로 받기 위해 PPA(Personal Package Archive)를 이용한다.
 add-apt-repository를 통해 PPA를 추가하고 패키지 최신 업데이트와 설치한다.
-https://docs.openstack.org/install-guide/environment-packages-ubuntu.html
+[PPA 가이드](https://docs.openstack.org/install-guide/environment-packages-ubuntu.html)
 
 <h5>DB, Message Queue, Memcached & etcd 설치</h5>
 오픈스택 서비스 컴포넌트들은 정보 저장을 위한 데이터베이스와 operation과 정보 처리를 위해 message queue를 미들웨어로 사용한다.
