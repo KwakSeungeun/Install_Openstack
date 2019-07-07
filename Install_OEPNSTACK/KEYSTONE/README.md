@@ -28,3 +28,6 @@ v3 API를 사용하게 되며 5000번으로 통일해서 사용한다.
     - user: 사용자
   - user: 사용자
 role: 서비스를 이용할 수 있는 권한을 나타냄. user와 project에 지정가능하며, user는 project마다 다른 role을 가지거나, 같은 project 내에서 여러 role을 가질 수 있다.(서비스마다 conf 설정을 통해 특정 operation 사용 가능 role을 설정한다. > user가 서비스를 요청 > 서비스는 해당 유저의 role을 식별 > role에 맞는 operation 권한 부여)
+
+### Verify operation
+### Create OpenStack client environment scripts
