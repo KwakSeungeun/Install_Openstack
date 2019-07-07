@@ -73,7 +73,7 @@ guest OS의 Privileged instruction 호출하는 부분을 Host OS의 같은 기�
 이처럼 비용적, 성능적 측면에서 사전 분석이 필요하다. (코스트에 대한 자세한 계산식은 Maarten van Steen, Andrew S. Tanenbaum의 Distributed System 교재를 참고)<br>
 <br>
 #.기업에서 Public Cloud를 사용하는 경우, 기업 내부 문서가 제 3자의 저장소에 저장된다는 부담이 있다. 하지만, 사내 Private Cloud를 구축하여, 그런 자료는 Private Cloud 내에 저장하는 등의 방법으로 보완이 가능하다. Hybrid Cloud를 구축하면 된다.
-
+<br>
 #.클라우드 이중화
 클라우드에 서버 등을 운영하는 경우 하나의 클라우드 가상 머신(A)에서 failure가 발생하는 경우에 대비하여 동일한 가상 머신 서버(B)를 두고, failure가 발생한 경우 B에서 서비스를 계속 제공한다. 이를 통해 availability, safety, maintainability를 높일 수 있다.
 
