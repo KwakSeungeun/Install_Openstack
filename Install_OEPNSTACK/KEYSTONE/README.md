@@ -19,9 +19,7 @@ v2 API에서 admin을 위한 port (35357)을 별개로 두어 5000번과 35357�
 v3 API를 사용하게 되며 5000번으로 통일해서 사용한다.
 일부 가이드에서 수정이 제대로 이루어지지 않아 35357을 사용하므로 주의
 35357을 사용할 경우 추후 사용자 인증 과정에서 communication error가 발생 할 수 있다.
-- client 환경 변수와 커맨드 옵션 사용 / 환경 script(OpenRC file) 이용
-* [script를 사용한 계정설정](https://docs.openstack.org/keystone/rocky/install/keystone-openrc-ubuntu.html)
-
+- client 환경 변수와 커맨드 옵션 사용 / [환경 script(OpenRC file) 이용](https://docs.openstack.org/keystone/rocky/install/keystone-openrc-ubuntu.html)
 
 
 #### Create a domain, projects, users, and roles
