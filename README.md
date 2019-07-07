@@ -1,4 +1,4 @@
-# Install_Openstack
+## Install_Openstack
 
 Openstack을 사용해 storage cloud service 환경을 구축하는 방법에 대해 설명한다.
 
@@ -17,9 +17,14 @@ Openstack을 사용해 storage cloud service 환경을 구축하는 방법에 �
 
 ---
 
-## Environment
+### Environment
 
 * Ubuntu version : 18.04
 * Openstack version : rocky
 * node : controller, storage1, storage2
 * usig component : keystone, swift
+
+---
+
+### 개발 중 이슈
+
