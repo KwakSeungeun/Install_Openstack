@@ -72,19 +72,20 @@ guest OS의 Privileged instruction 호출하는 부분을 Host OS의 같은 기�
 클라우드 서비스는 기존 웹 호스팅 방식보다 elastic한 방식으로 리소스를 사용할 수 있다는 장점이 있다. 또한 cloud 서비스 이용자는 수요를 예측하고 리소스를 확충해서 대비할 수 있다. 이런 경우 웹 호스팅 방식처럼 고정된 용량과 성능의 HW를 마련해 일관된 비용을 지불하는 것보다 사용량만큼 지불을 하는 것으로 합리적인 비용 지불이 가능하다. 또한, 인프라를 클릭으로 간편하게 구축이 가능하여, 인프라를 구축하는데 사용되는 시간를 절약할 수 있으며 관리에 대한 비용적, 시간적 부담을 덜 수 있다. 현재 AWS를 필두로 여러 클라우드 서비스 업체는 이용자의 수요에 따라 여러 플랫폼, 방식의 클라우드 서비스를 제공하고 있어 목적에 선택해서 사용하면 된다. 하지만, 사용량에 따른 비용 지출 방식은 사전에 철저한 계산과 예측을 요구한다. 자칫하면 엄청난 요금 폭탄을 맞을 수 있기 때문이다. 실제로, AWS를 이용하는 업체 중 높은 비용으로 불만을 가지는 업체도 많이 있다고 한다. 또한 인터넷 환경에서 원격지와의 통신으로 이루어지는 서비스인 만큼 인터넷 환경의 영향을 받는다. LAN에 비해 WAN이 더 불안정할 수 밖에 없다. 또한 로컬에서 이루어지는 트랜잭션에 비해 시간이 많이 소요될 수 있다. 데이터 량, 초당 이루어지는 트랜잭션 등을 따져보아 클라우드를 사용하는 것이 옳은 것인지 따져보아야 한다.  
 이처럼 비용적, 성능적 측면에서 사전 분석이 필요하다. (코스트에 대한 자세한 계산식은 Maarten van Steen, Andrew S. Tanenbaum의 Distributed System 교재를 참고)<br>
 <br>
-#.기업에서 Public Cloud를 사용하는 경우, 기업 내부 문서가 제 3자의 저장소에 저장된다는 부담이 있다. 하지만, 사내 Private Cloud를 구축하여, 그런 자료는 Private Cloud 내에 저장하는 등의 방법으로 보완이 가능하다. Hybrid Cloud를 구축하면 된다.
+#.기업에서 Public Cloud를 사용하는 경우, 기업 내부 문서가 제 3자의 저장소에 저장된다는 부담이 있다. 하지만, 사내 Private Cloud를 구축하여, 그런 자료는 Private Cloud 내에 저장하는 등의 방법으로 보완이 가능하다. Hybrid Cloud를 구축하면 된다.<br>
 <br>
 #.클라우드 이중화
-클라우드에 서버 등을 운영하는 경우 하나의 클라우드 가상 머신(A)에서 failure가 발생하는 경우에 대비하여 동일한 가상 머신 서버(B)를 두고, failure가 발생한 경우 B에서 서비스를 계속 제공한다. 이를 통해 availability, safety, maintainability를 높일 수 있다.
-
+클라우드에 서버 등을 운영하는 경우 하나의 클라우드 가상 머신(A)에서 failure가 발생하는 경우에 대비하여 동일한 가상 머신 서버(B)를 두고, failure가 발생한 경우 B에서 서비스를 계속 제공한다. 이를 통해 availability, safety, maintainability를 높일 수 있다.<br>
+<br>
 #.클라우드 네이티브
 클라우드 컴퓨팅 서비스가 확산되면서 클라우드 컴퓨팅 제공 모델에 최적화된 탄력적이고 분산된 방식의 애플리케이션의 구축과 실행 접근 방법을 의미하며 애플리케이션이 Public Cloud에 위치하는 것을 암시한다.
 CNCF(Cloud Native Computing Foundation)에서는 좁은 의미로 컨테이너화되는 오픈소스 소프트웨어 스택을 사용하는 것을 의미한다. 
-http://www.itworld.co.kr/news/109679  
-
+http://www.itworld.co.kr/news/109679<br>
+<br>
 #.마이크로서비스
 애플리케이션을 느슨히 결합된 서비스의 모임으로 구조화하는 서비스 지향 아키텍처(SOA) 스타일의 일종인 소프트웨어 개발 기법.
-https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4
+https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4<br>
+<br>
 
 <h4>참고 자료</h4>
 https://www.redhat.com/ko/topics/cloud-computing/what-is-hybrid-cloud
