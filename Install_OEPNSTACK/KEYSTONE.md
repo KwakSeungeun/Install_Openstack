@@ -7,8 +7,9 @@ controller 노드에서 여러 서비스 사용에 필요한 인증 서비스를
 * [keystone install docs](https://docs.openstack.org/keystone/rocky/install/keystone-install-ubuntu.html#configure-the-apache-http-server)
 ---
 ### Install and configure
-
-- keystone을 위해 사용할 database 를 만들고, 접근을 위한 설정을 한다. 
+```
+keystone을 위해 사용할 database 를 만들고, 접근을 위한 설정을 한다. 
+```
 - 필요한 패키지 설치
   - keystone : openstack 인증 서비스 component
   - apache2 : HTTP server를 제공하는 아파치 재단의 프로젝트 중 하나
