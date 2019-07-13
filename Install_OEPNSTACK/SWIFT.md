@@ -12,12 +12,13 @@ account server는 특정 account가 어떤 container를 가졌는지 listing한�
 * [swift architecture 자세한 설명](https://docs.openstack.org/swift/latest/overview_architecture.html)
 ![Swift architecture](https://image.slidesharecdn.com/swift-140701223711-phpapp02/95/openstack-swift-overview-6-638.jpg?cb=1404254496)
 * [swift install docs](https://docs.openstack.org/swift/latest/install/)
+
 ---
 ### Install and configure the controller node
 ```
 proxy service 설치와 설정(controller에서 proxy service를 제공하도록 설정하는 경우)
 ```
-- ※Swift의 경우 내부적인 인증 매커니즘이 있어 Keystone을 사용하지 않을 수도 있다.
+- ※ Swift의 경우 내부적인 인증 매커니즘이 있어 Keystone을 사용하지 않을 수도 있다.
 - 필요한 패키지 설치
   - swift : openstack object storage service component
   - swift-proxy
@@ -28,8 +29,6 @@ proxy service 설치와 설정(controller에서 proxy service를 제공하도록
   
 - ※curl -o /etc/swift/proxy-server.conf https://opendev.org/openstack/swift/raw/branch/master/etc/proxy-server.conf-sample 명령 후 받은 conf file로 진행시 오류가 날 경우 [^1]
 
-~~- proxy service configuration file을 다음 명령을 통해 받아온다.
-curl -o /etc/swift/proxy-server.conf https://git.openstack.org/cgit/openstack/swift/plain/etc/proxy-server.conf-sample?h=stable/rocky~~
 ### Install and configure the storage nodes
 ```
 storage node(account, container, object) 설치와 설정
@@ -81,9 +80,10 @@ AWS를 이용해서 로컬 인스턴스로 구성한 경우, **scp -i [.pem파�
 ---
 ### 기타 
 [swift command](https://docs.openstack.org/ocata/cli-reference/swift.html)
-https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/account-server.conf-sample https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/container-server.conf-sample https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/object-server.conf-sample
 
-/etc/swift/swift.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/swift.conf-sample
-
-[^1]: /etc/swift/proxy-server.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/proxy-server.conf-sample
+[^1]: * ※ curl -o 로 conf file을 받아온 뒤 진행시 오류가 발생하면, 버전이 맞지 않아 그런 것이므로 아래의 주소로 받는다. 
+proxy-server.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/proxy-server.conf-sample  
+account-server.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/account-server.conf-sample  
+container-server.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/container-server.conf-sample  
+object-servre.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/object-server.conf-sample  
 
