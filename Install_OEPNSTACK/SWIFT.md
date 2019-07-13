@@ -67,7 +67,7 @@ swift-ring-builder account.builder add --region 1 --zone 1 --ip 자기자신priv
    swift-ring-builder account.builder add--region 1 --zone 1 --ip 172.31.0.0 --port 6202 --device xvdc --weight 100
 - Ditribute ring configuration files
 VirtualBox같은 가상화 프로그램을 이용해서 로컬 인스턴스로 노드를 구성한 경우, **scp [] [받을 노드의 주소 or 호스트 네임]:[받을 위치]** 명령어를 쓰면 된다.  
-AWS를 이용해서 로컬 인스턴스로 구성한 경우, **scp -i [.pem파일] [파일명] [유저이름@인스턴스 주소]:[받을 위치]** 명령어를 쓴다.  
+AWS를 이용해서 로컬 인스턴스로 구성한 경우, **scp -i [.pem파일(디렉토리path포함)] [파일명] [유저이름@인스턴스 주소]:[받을 위치]** 명령어를 쓴다.  
 우리의 경우 **pem파일**을 local에서 controller 노드로 보낸 뒤 컨트롤러 노드에서 각각의 스토리지 노드로 파일을 전송했다.  
 이때 인스턴스의 인바운드 규칙에 local pc의 ip와 각 노드의 ip주소를 추가하여 보안 그룹 내에 포함시켜야 한다.  
 또한, 파일을 전송할 때 원격지 다운로드 위치의 소유자와 인스턴스 유저이름이 일치해야 하며, 디렉토리의 rwx 권한도 확인해줘야 한다.
