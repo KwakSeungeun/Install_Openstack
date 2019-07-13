@@ -76,6 +76,6 @@ AWS를 이용해서 로컬 인스턴스로 구성한 경우, **scp -i [.pem파�
 
 ### Finalize installation
 ### Verify operation
-
+---
 ### 기타 
 [swift command](https://docs.openstack.org/ocata/cli-reference/swift.html)
