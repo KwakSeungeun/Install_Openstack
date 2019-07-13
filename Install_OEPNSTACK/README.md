@@ -47,6 +47,14 @@ Object Storage : Optional 노드, object storage로써 사용될 disk를 포함.
 - [Configure network interface 키워드 의미](https://unix.stackexchange.com/questions/128439/good-detailed-explanation-of-etc-network-interfaces-syntax)
 - AWS ec2로 노드를 구성한 경우  
 노드간의 네트워킹을 위해서 instance의 보안 그룹의 인스턴스마다의 인바운드 규칙에서 상호간에 ip를 통신 가능하도록 추가해준 뒤, 위 과정을 진행해야 한다. 추가한 뒤 ping을 보내어 연결되었는지 확인한다.
+##### ip 용어와 개념
+- fixed ip
+    - 클라우드에서 : 클라우드 플랫폼 내에서 생성된 instance에게 초기에 할당된 private ip, fixed ip로 외부망과의 통신이 불가능하고, instance간의 통신이 가능하다.  
+    - 통상적으로 : ISP로부터 지정 받은 고정 ip  
+
+- floating ip : 클라우드 플랫폼이 등장하며 생긴 개념, 외부망과의 통신이 가능하다. instance에 필요에 따라 할당과 해제가 가능하다.  
+- public ip : 외부망과 통신 가능한 공인된 ip  
+- dynamic ip : DHCP 프로토콜에 의해 동적으로 할당받은 ip  
 #### NTP
 ```
 노드간 synchronization을 위한 과정
