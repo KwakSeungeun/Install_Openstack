@@ -27,7 +27,7 @@ proxy service 설치와 설정(controller에서 proxy service를 제공하도록
   - python-keystonemidlleware
   - memcached : 범용 분산 캐시 시스템  
   
-- ※curl -o /etc/swift/proxy-server.conf https://opendev.org/openstack/swift/raw/branch/master/etc/proxy-server.conf-sample 명령 후 받은 conf file로 진행시 오류가 날 경우 [^1]
+- ※curl -o /etc/swift/proxy-server.conf https://opendev.org/openstack/swift/raw/branch/master/etc/proxy-server.conf-sample 명령 후 받은 conf file로 진행시 오류가 날 경우 [맨 아래 기타 참고]
 
 ### Install and configure the storage nodes
 ```
@@ -81,7 +81,7 @@ AWS를 이용해서 로컬 인스턴스로 구성한 경우, **scp -i [.pem파�
 ### 기타 
 [swift command](https://docs.openstack.org/ocata/cli-reference/swift.html)
 
-[^1]: * ※ curl -o 로 conf file을 받아온 뒤 진행시 오류가 발생하면, 버전이 맞지 않아 그런 것이므로 아래의 주소로 받는다. 
+[※] curl -o 로 conf file을 받아온 뒤 진행시 오류가 발생하면, 버전이 맞지 않아 그런 것이므로 아래의 주소로 받는다. 
 proxy-server.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/proxy-server.conf-sample  
 account-server.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/account-server.conf-sample  
 container-server.conf > https://opendev.org/openstack/swift/raw/branch/stable/rocky/etc/container-server.conf-sample  
