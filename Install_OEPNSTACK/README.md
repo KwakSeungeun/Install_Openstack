@@ -79,6 +79,9 @@ etcd는 값 변경에 대한 감시 기능을 제공하므로 설정이 변경�
 좀 더 나아가면 데이터에 대한 일관성을 보장하는 점을 활용해서 리더를 선출하고, 작업 클러스터 전체에 대한 분산 잠금을 수행 할 수 있다.
 ```
 - [etcd란?](https://www.joinc.co.kr/w/man/12/etcd)
+---
+- [KEYSTONE 설치 바로가기](https://github.com/KwakSeungeun/Install_Openstack/blob/master/Install_OEPNSTACK/KEYSTONE.md)
+- [SWIFT 설치 바로가기](https://github.com/KwakSeungeun/Install_Openstack/blob/master/Install_OEPNSTACK/SWIFT.md)
 
 
 #### 유용한 linux command
