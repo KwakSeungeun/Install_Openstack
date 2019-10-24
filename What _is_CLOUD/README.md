@@ -21,7 +21,7 @@
 
 ---
 ### 클라우드 서비스
-#.Iaas (infrastructure as a service) : 데이터 센터의 하드웨어 자원을 가상화하여 CPU, Memory, Storagge, Network 등의 리소스 제공을 통한 인프라 서비스 제공, 원하는 성능의 하드웨어 자원으로 가상 머신을 이용할 수 있다.  
+#.Iaas (infrastructure as a service) : 데이터 센터의 하드웨어 자원을 가상화하여 CPU, Memory, Storage, Network 등의 리소스 제공을 통한 인프라 서비스 제공, 원하는 성능의 하드웨어 자원으로 가상 머신을 이용할 수 있다.  
 대표적인 예) 아마존AWS의 EC2 등  
 
 #.Paas (Platform as a service) : 앱 개발에 필요한 플랫폼을 제공하는 서비스로 개발 언어, 웹 프레임워크, DB 서버, 웹 서버 등을 제공한다. API도 PaaS 서비스의 일종이다.  
