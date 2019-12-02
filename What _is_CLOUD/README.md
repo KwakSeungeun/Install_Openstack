@@ -62,12 +62,12 @@ Containers / OS / HW : 하나의 OS에 동일한 OS를 사용하는 여러 환�
 
 ※VMM / OS / HW 순서의 레이어일지라도 VMM이 Priviledged instruction을 이용해서 HW에 직접 접근하는 경우가 있을 수 있다.  
 
----
-
 #.Container Orchestration 
 Container를 사용해 서비스를 운영을 하다보면 대량의 Container가 동작하게 된다. 계속해서 생성되고 삭제되는 Container들을 개발자(운영진)이 관리하는 것은 불가능에 가깝다. 따라서 Container들을 관리해주는 툴이 필요하게 됐으며 최근에는 [kubernetes](https://kubernetes.io/ko/)가 대세로 자리잡고 있다. 이에 따라 GCP,Azure, AWS모두 이와 관련된 서비스를 제공한다.
 
 GCP : Google Kubernetes Engine(GKE) / Azure : Azure Kubernetes Service(AKS) / AWS :  Amazon Elastic Kubernetes Service(EKS)
+
+---
 
 #### 가상화 방식에 따른 분류
 #.전가상화(Full Virtualization)  
